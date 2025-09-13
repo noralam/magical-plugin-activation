@@ -1,0 +1,1230 @@
+/* Shop Toolkit Pro Plugin Recommendations Admin Styles */
+
+.magical-plugin-activation-plugins {
+    padding: 20px 0;
+    max-width: 1400px;
+}
+
+.magical-plugin-activation-plugins .description {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #666;
+    line-height: 1.6;
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-left: 4px solid #0073aa;
+    border-radius: 4px;
+}
+
+/* Filter Tabs */
+.plugin-filter-tabs {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccd0d4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.filter-tab {
+    background: none;
+    border: none;
+    padding: 12px 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    color: #646970;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border-radius: 6px 6px 0 0;
+    position: relative;
+}
+
+.filter-tab:hover {
+    color: #0073aa;
+    background: #f6f7f7;
+    border-bottom-color: #0073aa;
+}
+
+.filter-tab.active {
+    color: #0073aa;
+    border-bottom-color: #0073aa;
+    background: #fff;
+    font-weight: 600;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+/* Plugins Grid */
+.plugins-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.plugin-card {
+    background: #fff;
+    border: 1px solid #e1e5e9;
+    border-radius: 12px;
+    padding: 25px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+    width: 100%;
+}
+
+.plugin-card:hover {
+    border-color: #0073aa;
+    box-shadow: 0 8px 25px rgba(0,115,170,0.15);
+    transform: translateY(-4px);
+}
+
+.plugin-card.featured {
+    border-color: #00a32a;
+    position: relative;
+    background: linear-gradient(135deg, #fff 0%, #f8fff9 100%);
+}
+
+.plugin-card.featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #00a32a 0%, #46b450 50%, #00a32a 100%);
+    background-size: 200% 100%;
+    animation: featured-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes featured-shimmer {
+    0%, 100% { background-position: 200% 0; }
+    50% { background-position: -200% 0; }
+}
+
+/* Featured Badge */
+.featured-badge {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background: linear-gradient(45deg, #00a32a, #46b450);
+    color: white;
+    padding: 6px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 0 12px 0 12px;
+    box-shadow: 0 2px 8px rgba(0,163,42,0.3);
+    letter-spacing: 0.5px;
+}
+
+/* Required Plugin Badge */
+.plugin-card .required-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #d63638;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(214, 54, 56, 0.3);
+}
+
+/* Plugin Card Required Styling */
+.plugin-card[data-required="1"] {
+    border: 2px solid #d63638;
+    box-shadow: 0 4px 12px rgba(214, 54, 56, 0.15);
+}
+
+.plugin-card[data-required="1"] .plugin-header h3 {
+    color: #d63638;
+    font-weight: 600;
+}
+
+/* Filter Tab for Required */
+.filter-tab[data-filter="required"] {
+    background: #fff2f2;
+    border-color: #d63638;
+    color: #d63638;
+}
+
+.filter-tab[data-filter="required"].active {
+    background: #d63638;
+    color: white;
+}
+
+/* Plugin Header */
+.plugin-header {
+    margin-bottom: 18px;
+    border-bottom: 1px solid #f0f0f1;
+    padding-bottom: 15px;
+}
+
+.plugin-header h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1d2327;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.plugin-category {
+    display: inline-block;
+    background: linear-gradient(135deg, #f0f0f1 0%, #e8e8e9 100%);
+    color: #50575e;
+    padding: 4px 12px;
+    font-size: 11px;
+    border-radius: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Category-specific colors */
+.plugin-category {
+    background: #f0f0f1;
+    color: #50575e;
+}
+
+/* Plugin Description */
+.plugin-description {
+    margin-bottom: 25px;
+    min-height: 60px;
+}
+
+.plugin-description p {
+    margin: 0;
+    color: #50575e;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* Plugin Actions */
+.plugin-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f1;
+}
+
+.plugin-actions .button {
+    min-width: 100px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+    text-transform: none;
+}
+
+.plugin-actions .button-primary {
+    background: linear-gradient(135deg, #0073aa 0%, #005a87 100%);
+    border-color: #0073aa;
+    box-shadow: 0 2px 4px rgba(0,115,170,0.3);
+}
+
+.plugin-actions .button-primary:hover {
+    background: linear-gradient(135deg, #005a87 0%, #004866 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,115,170,0.4);
+}
+
+.plugin-actions .button.disabled {
+    background: linear-gradient(135deg, #f0f0f1 0%, #e8e8e9 100%);
+    color: #50575e;
+    cursor: default;
+    border-color: #ddd;
+}
+
+/* Plugin Status */
+.plugin-status {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.plugin-status.status-active {
+    background: linear-gradient(135deg, #d1e7dd 0%, #c3e6cb 100%);
+    color: #0a3622;
+    border: 1px solid #badbcc;
+}
+
+.plugin-status.status-inactive {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    color: #664d03;
+    border: 1px solid #f1c40f;
+}
+
+.plugin-status.status-not-installed {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    color: #58151c;
+    border: 1px solid #f1556c;
+}
+
+/* Update status styles */
+.plugin-status.status-needs-update {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+    color: #d63031;
+    border: 1px solid #fdcb6e;
+    animation: updatePulse 2s ease-in-out infinite;
+}
+
+.plugin-status.status-inactive-needs-update {
+    background: linear-gradient(135deg, #fab1a0 0%, #e17055 100%);
+    color: #2d3436;
+    border: 1px solid #e17055;
+    animation: updatePulse 2s ease-in-out infinite;
+}
+
+@keyframes updatePulse {
+    0%, 100% { 
+        transform: scale(1); 
+        opacity: 1; 
+    }
+    50% { 
+        transform: scale(1.05); 
+        opacity: 0.8; 
+    }
+}
+
+/* Update button styles */
+.button.update-plugin {
+    background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%) !important;
+    border-color: #fdcb6e !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    box-shadow: 0 2px 4px rgba(253, 203, 110, 0.3) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.button.update-plugin:hover {
+    background: linear-gradient(135deg, #e17055 0%, #d63031 100%) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(253, 203, 110, 0.4) !important;
+}
+
+.button.update-plugin::before {
+    content: '⚡';
+    margin-right: 5px;
+}
+
+/* Version info styles */
+.version-info {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+    font-size: 11px;
+    line-height: 1.3;
+    opacity: 0.8;
+}
+
+.plugin-card[data-status="needs-update"] .version-info,
+.plugin-card[data-status="inactive-needs-update"] .version-info {
+    color: #d63031;
+    font-weight: 600;
+}
+
+/* Local plugin badge */
+.local-plugin-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(108, 92, 231, 0.3);
+}
+
+/* Plugin card with local plugin styling */
+.plugin-card[data-local="1"] {
+    border: 2px solid #6c5ce7;
+    background: linear-gradient(135deg, #fff 0%, #f8f7ff 100%);
+    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.15);
+}
+
+.plugin-card[data-local="1"] .plugin-header h3 {
+    color: #6c5ce7;
+    font-weight: 600;
+}
+
+/* Update available notice */
+.update-notice {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(253, 203, 110, 0.2);
+}
+
+.update-notice h3 {
+    margin: 0 0 10px 0;
+    color: #d63031;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.update-notice h3::before {
+    content: '⚠️';
+    font-size: 18px;
+}
+
+.update-notice p {
+    margin: 0;
+    color: #856404;
+    line-height: 1.5;
+}
+
+/* Loading States */
+.button.loading {
+    position: relative;
+    color: transparent !important;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.button.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    margin: -9px 0 0 -9px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: button-loading 1s linear infinite;
+}
+
+@keyframes button-loading {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Filter States */
+.plugin-card.hidden {
+    display: none;
+}
+
+/* Admin Notice */
+.magical-plugin-activation-pro-plugin-notice {
+    position: relative;
+    border: none !important;
+    background: linear-gradient(135deg, #fff 0%, #f8f9ff 100%) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 20px rgba(34, 113, 177, 0.12) !important;
+    padding: 0 !important;
+    margin: 20px 0 !important;
+    overflow: hidden;
+}
+
+.magical-plugin-activation-pro-plugin-notice::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2271b1 0%, #135e96 50%, #2271b1 100%);
+    background-size: 200% 100%;
+    animation: recommendedShimmer 3s ease-in-out infinite;
+}
+
+@keyframes recommendedShimmer {
+    0%, 100% { background-position: 200% 0; }
+    50% { background-position: -200% 0; }
+}
+
+.magical-plugin-activation-pro-plugin-notice > div {
+    padding: 20px 25px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+    margin: 0 !important;
+}
+
+.magical-plugin-activation-pro-plugin-notice h3 {
+    color: #2271b1 !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    margin: 0 0 8px 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.magical-plugin-activation-pro-plugin-notice h3::before {
+    content: '⚡';
+    font-size: 20px;
+    filter: hue-rotate(200deg);
+}
+
+.magical-plugin-activation-pro-plugin-notice p {
+    color: #3c434a !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    margin: 0 0 15px 0 !important;
+}
+
+.magical-plugin-activation-pro-plugin-notice .button {
+    background: linear-gradient(135deg, #2271b1 0%, #135e96 100%) !important;
+    border: none !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    text-decoration: none !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 2px 8px rgba(34, 113, 177, 0.3) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.magical-plugin-activation-pro-plugin-notice .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.magical-plugin-activation-pro-plugin-notice .button:hover::before {
+    left: 100%;
+}
+
+.magical-plugin-activation-pro-plugin-notice .button:hover {
+    background: linear-gradient(135deg, #135e96 0%, #0f4a75 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(34, 113, 177, 0.4) !important;
+}
+
+.magical-plugin-activation-pro-plugin-notice .button:active {
+    transform: translateY(0) !important;
+}
+
+.magical-plugin-activation-pro-plugin-notice .button-secondary {
+    background: rgba(34, 113, 177, 0.1) !important;
+    color: #2271b1 !important;
+    border: 2px solid rgba(34, 113, 177, 0.2) !important;
+    box-shadow: none !important;
+}
+
+.magical-plugin-activation-pro-plugin-notice .button-secondary:hover {
+    background: rgba(34, 113, 177, 0.15) !important;
+    border-color: rgba(34, 113, 177, 0.3) !important;
+    transform: translateY(-1px) !important;
+}
+
+.magical-plugin-activation-pro-plugin-notice .notice-dismiss {
+    top: 15px !important;
+    right: 15px !important;
+    color: #2271b1 !important;
+    opacity: 0.6 !important;
+    font-size: 18px !important;
+}
+
+.magical-plugin-activation-pro-plugin-notice .notice-dismiss:hover {
+    opacity: 1 !important;
+    color: #135e96 !important;
+}
+
+/* Plugin icon in notice */
+.magical-plugin-activation-pro-plugin-notice .plugin-icon-recomend {
+    font-size: 48px;
+    color: #2271b1;
+    opacity: 0.15;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Success/Error Messages */
+.plugin-message {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #00a32a;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(-10px) scale(0.9);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0,163,42,0.3);
+    z-index: 10;
+}
+
+.plugin-message.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.plugin-message.error {
+    background: #d63638;
+    box-shadow: 0 4px 12px rgba(214,54,56,0.3);
+}
+
+/* Install Required Plugins Button */
+#install-required-plugins {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+#install-required-plugins:hover {
+    animation: none;
+    transform: scale(1.05);
+}
+
+/* Progress indicator for bulk install */
+.bulk-install-progress {
+    margin: 15px 0;
+    padding: 15px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.bulk-install-progress.active {
+    display: block;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.progress-bar {
+    height: 12px;
+    background: #e9ecef;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+    border-radius: 6px 6px 0 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(45deg, #0073aa 25%, #005a87 25%, #005a87 50%, #0073aa 50%, #0073aa 75%, #005a87 75%, #005a87);
+    background-size: 20px 20px;
+    transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 0%;
+    position: relative;
+    border-radius: 6px;
+    animation: progressStripes 1s linear infinite;
+}
+
+@keyframes progressStripes {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 20px 0;
+    }
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0.2), transparent, rgba(255,255,255,0.2));
+    border-radius: 6px;
+    animation: progressGlow 2s ease-in-out infinite;
+}
+
+@keyframes progressGlow {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.progress-text {
+    font-size: 13px;
+    color: #495057;
+    text-align: center;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Plugin Update Notice */
+.magical-plugin-activation-pro-update-notice {
+    position: relative;
+    border: 1px solid #d39e00;
+    border-left: 4px solid #d39e00;
+    padding: 12px;
+    margin: 5px 15px 20px 0;
+    background: #fff8e1;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.magical-plugin-activation-pro-update-notice .plugin-update-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.magical-plugin-activation-pro-update-notice .plugin-update-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #d39e00;
+}
+
+.magical-plugin-activation-pro-update-notice .plugin-update-content p {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #5c5c5c;
+}
+
+.magical-plugin-activation-pro-update-notice .plugin-icon-recomend {
+    font-size: 32px;
+    opacity: 0.8;
+    min-width: 40px;
+    text-align: center;
+}
+
+.plugin-update-list {
+    margin: 15px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.plugin-update-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 13px;
+    flex-wrap: wrap;
+}
+
+.plugin-update-item strong {
+    color: #333;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.plugin-update-item .local-plugin-badge {
+    background: #2271b1;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.plugin-update-item .version-info {
+    color: #666;
+    font-size: 12px;
+    margin-left: auto;
+}
+
+.plugin-update-item .button {
+    margin-left: 10px;
+    padding: 4px 8px;
+    font-size: 12px;
+    height: auto;
+    line-height: 1.2;
+}
+
+/* Update button styles */
+.update-plugin {
+    background: #d39e00;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.update-plugin:hover {
+    background: #b8860b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(211, 158, 0, 0.3);
+}
+
+.update-plugin:active {
+    transform: translateY(0);
+}
+
+.update-plugin:disabled,
+.update-plugin.loading {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.update-plugin.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: button-loading 1.5s ease-in-out infinite;
+}
+
+@keyframes button-loading {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Update All Plugins Button */
+#update-all-plugins {
+    background: #d39e00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#update-all-plugins:hover {
+    background: #b8860b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(211, 158, 0, 0.3);
+}
+
+#update-all-plugins:active {
+    transform: translateY(0);
+}
+
+#update-all-plugins:before {
+    content: "🔄";
+    font-size: 14px;
+}
+
+/* Plugin status indicators for updates */
+.plugin-status.status-needs-update,
+.plugin-status.status-inactive-needs-update {
+    color: #d39e00;
+    font-weight: 600;
+    background: #fff8e1;
+    padding: 4px 8px;
+    border-radius: 3px;
+    border: 1px solid #d39e00;
+}
+
+.plugin-status.status-needs-update::before,
+.plugin-status.status-inactive-needs-update::before {
+    content: "🔄";
+    margin-right: 4px;
+}
+
+/* Version info styling */
+.plugin-card .version-info {
+    display: block;
+    margin-top: 8px;
+    color: #666;
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.plugin-card .version-info strong {
+    color: #333;
+}
+
+/* Update available badge */
+.plugin-card .update-available {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #d39e00;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+/* Responsive design for update notice */
+@media (max-width: 782px) {
+    .magical-plugin-activation-pro-update-notice .plugin-update-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .plugin-update-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .plugin-update-item .version-info {
+        margin-left: 0;
+    }
+    
+    .plugin-update-item .button {
+        margin-left: 0;
+        margin-top: 8px;
+        align-self: flex-start;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .plugins-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 782px) {
+    .magical-plugin-activation-plugins {
+        padding: 10px 0;
+    }
+    
+    .plugins-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .plugin-filter-tabs {
+        padding: 8px;
+        gap: 3px;
+    }
+    
+    .filter-tab {
+        flex: 1;
+        min-width: auto;
+        text-align: center;
+        padding: 10px 8px;
+        font-size: 11px;
+        margin-right: 0;
+    }
+    
+    .plugin-card {
+        padding: 20px;
+    }
+    
+    .plugin-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    
+    .plugin-actions .button {
+        width: 100%;
+    }
+    
+    .magical-plugin-activation-pro-plugin-notice p {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .magical-plugin-activation-pro-plugin-notice .button {
+        margin-left: 0;
+        align-self: stretch;
+    }
+}
+
+/* Responsive improvements for recommended notice */
+@media (max-width: 768px) {
+    .magical-plugin-activation-pro-plugin-notice > div {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 15px !important;
+    }
+    
+    .magical-plugin-activation-pro-plugin-notice > div > div:first-child {
+        order: 2;
+    }
+    
+    .magical-plugin-activation-pro-plugin-notice .plugin-icon-recomend {
+        order: 1;
+        font-size: 36px !important;
+    }
+    
+    .magical-plugin-activation-pro-plugin-notice > div > div:first-child > div {
+        justify-content: center !important;
+    }
+    
+    .bulk-install-progress {
+        padding: 12px !important;
+        margin: 10px 0 !important;
+    }
+    
+    .progress-text {
+        font-size: 12px !important;
+    }
+}
+
+/* Animation for when plugins are successfully installed */
+@keyframes success-pulse {
+    0%, 100% { 
+        transform: scale(1); 
+        opacity: 1; 
+    }
+    50% { 
+        transform: scale(1.05); 
+        opacity: 0.8; 
+    }
+}
+
+.magical-plugin-activation-pro-plugin-notice.success {
+    animation: success-pulse 0.6s ease-in-out;
+}
+
+/* Loading state for buttons */
+.magical-plugin-activation-pro-plugin-notice .button.loading {
+    position: relative;
+    color: transparent !important;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.magical-plugin-activation-pro-plugin-notice .button.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: button-loading 1s linear infinite;
+}
+
+/* Bulk Update Progress */
+.bulk-update-progress {
+    margin-top: 15px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.bulk-update-progress.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bulk-update-progress .progress-bar {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.bulk-update-progress .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #d39e00, #f1c40f);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    position: relative;
+}
+
+.bulk-update-progress .progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: progress-shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes progress-shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.bulk-update-progress .progress-text {
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Improved focus states for accessibility */
+.filter-tab:focus,
+.plugin-actions .button:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
+
+/* Loading skeleton effect */
+.plugin-card.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.plugin-card.loading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: loading-shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes loading-shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Plugin Notices */
+.magical-plugin-activation-pro-required-notice,
+.magical-plugin-activation-pro-recommended-notice,
+.magical-plugin-activation-pro-update-notice {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 20px 0;
+    animation: slideInFromTop 0.3s ease-out;
+}
+
+.magical-plugin-activation-pro-required-notice {
+    border-left: 4px solid #dc3232;
+}
+
+.magical-plugin-activation-pro-recommended-notice {
+    border-left: 4px solid #0073aa;
+}
+
+.magical-plugin-activation-pro-update-notice {
+    border-left: 4px solid #ffb900;
+}
+
+.plugin-recommended-content,
+.plugin-update-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.plugin-recommended-content .plugin-icon-recomend,
+.plugin-update-content .plugin-icon-recomend {
+    font-size: 24px;
+    opacity: 0.8;
+}
+
+.plugin-recommended-content h3,
+.plugin-update-content h3 {
+    margin: 0 0 10px 0;
+    color: #23282d;
+    font-size: 16px;
+}
+
+.plugin-recommended-content p,
+.plugin-update-content p {
+    margin: 0 0 15px 0;
+    color: #646970;
+    line-height: 1.5;
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
