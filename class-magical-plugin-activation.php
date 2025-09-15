@@ -680,7 +680,7 @@ class magical_plugin_activation_Plugin_Recommendations {
             'magical-plugin-activation-plugins-admin',
             $this->plugin_url . '/assets/js/admin-plugins.js',
             array('jquery'),
-            NEWSPAPER_EYE_VERSION,
+            '1.0.0',
             true
         );
         
@@ -711,7 +711,7 @@ class magical_plugin_activation_Plugin_Recommendations {
             'magical-plugin-activation-plugins-admin',
             $this->plugin_url . '/assets/css/admin-plugins.css',
             array(),
-            NEWSPAPER_EYE_VERSION
+            '1.0.0'
         );
     }
     
@@ -1600,4 +1600,5 @@ class magical_plugin_activation_Plugin_Recommendations {
 
 // Initialize the plugin recommendations
 new magical_plugin_activation_Plugin_Recommendations();
+
 
